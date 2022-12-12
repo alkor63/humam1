@@ -1,13 +1,17 @@
 public class Human {
-    public String name;
-    public String town;
-    public int yearOfBirth;
-    public String jobTitle;
+    private String name;
+    private String town;
+    private int yearOfBirth;
+    private String jobTitle;
 
     public Human(String name, String town, int yearOfBirth, String jobTitle) {
+        if(name == null || name.equals("")) name = "Информация не указана";
         this.name = name;
+        if(town == null || town.equals("")) town = "Информация не указана";
         this.town = town;
+        if (yearOfBirth < 0) yearOfBirth = 0;
         this.yearOfBirth = yearOfBirth;
+        if(jobTitle == null || jobTitle.equals("")) jobTitle = "Информация не указана";
         this.jobTitle = jobTitle;
     }
 
