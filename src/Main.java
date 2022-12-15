@@ -10,5 +10,16 @@ public class Main {
 
         for (Human hp:humans)
         System.out.println(hp);
+
+        Flower rose = new Flower("роза","Голландия",35.598520,0);
+        Flower chrysanthemum = new Flower("хризантема",null,15,5);
+        Flower peony = new Flower("пион","Англия",69.9,1);
+        Flower gypsophila = new Flower("гипсофила","Турция",19.5,10);
+
+        System.out.println(rose);
+        System.out.println(chrysanthemum);
+        System.out.println(peony);
+        System.out.println(gypsophila);
+
     }
 }
