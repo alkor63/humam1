@@ -20,6 +20,9 @@ public class Main {
         System.out.println(chrysanthemum);
         System.out.println(peony);
         System.out.println(gypsophila);
-
+        Bouquet bouquet = new Bouquet(5,rose, 7,peony);
+        System.out.println(bouquet);
+        Bouquet bouquet2 = new Bouquet(5,rose, 7,peony,3,chrysanthemum,2,gypsophila);
+        System.out.println(bouquet2);
     }
 }
