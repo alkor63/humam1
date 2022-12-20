@@ -1,30 +1,29 @@
 public class Main {
     public static void main(String[] args) {
 
-        Human[] humans = new Human[4];
-        humans[0] = new Human();
-        humans[0].name = "Максим";
-        humans[0].town = "Минск";
-        humans[0].yearOfBirth = 1988;
-        System.out.println(humans[0]);
+        Human[] humans = new Human[5];
+        humans[0] = new Human("", "Минск", 1988, "бренд-менеджер");
+        humans[1] = new Human("Аня", "", 1993, "методист образовательных программ");
+        humans[2] = new Human("Катя", "Калининград", 1992, null);
+        humans[3] = new Human("Артем", "Москва", -1995, "директор по развитию бизнеса");
+        humans[4] = new Human("Владимир", "Казань", 2001, "безработный");
 
-        humans[1] = new Human();
-        humans[1].name = "Аня";
-        humans[1].town = "Москва";
-        humans[1].yearOfBirth = 1993;
-        System.out.println(humans[1]);
+        for (Human human : humans) {
+            System.out.println(human);
+        }
 
-        humans[2] = new Human();
-        humans[2].name = "Катя";
-        humans[2].town = "Калининград";
-        humans[2].yearOfBirth = 1992;
-        System.out.println(humans[2]);
+        Flower rose = new Flower("роза", "Голландия", 35.598520, 0);
+        Flower chrysanthemum = new Flower("хризантема", null, 15, 5);
+        Flower peony = new Flower("пион", "Англия", 69.9, 1);
+        Flower gypsophila = new Flower("гипсофила", "Турция", 19.5, 10);
+        Flower[] flowers = new Flower[]{rose, chrysanthemum, peony, gypsophila};
+        int[] numFlowers = new int[]{3, 5, 0, 1};
 
-        humans[3] = new Human();
-        humans[3].name = "Артем";
-        humans[3].town = "Москва";
-        humans[3].yearOfBirth = 1995;
-        System.out.println(humans[3]);
+        for (Flower flower : flowers) {
+            System.out.println(flower);
+        }
 
+        Bouquet bouquet = new Bouquet(numFlowers, flowers);
+        System.out.println(bouquet);
     }
 }
